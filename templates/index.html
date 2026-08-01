@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Summarizer</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <h1>Text Summarizer</h1>
+
+    <form action="/summarize" method="post">
+        <textarea
+            name="text"
+            rows="10"
+            cols="60"
+            placeholder="Enter your text here..."
+        >{{ text }}</textarea>
+
+        <br><br>
+
+        <button type="submit">Summarize</button>
+    </form>
+
+    {% if summary %}
+    <h2>Summary</h2>
+    <p>{{ summary }}</p>
+    {% endif %}
+
+    <script src="/static/script.js"></script>
+
+</body>
+</html>
