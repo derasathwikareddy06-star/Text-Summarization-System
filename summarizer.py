@@ -2,8 +2,7 @@ from transformers import pipeline
 
 summarizer = pipeline(
     "summarization",
-    model="sshleifer/distilbart-cnn-12-6"
-)
+    model="Falconsai/text_summarization"
 
 def summarize_text(text):
     result= summarizer(
