@@ -1,7 +1,7 @@
-fastapi
-uvicorn
+fastapi==0.115.0
+uvicorn==0.30.6
 jinja2
 python-multipart
-transformers
-torch
+transformers==4.41.2
+torch==2.3.1
 sentencepiece
