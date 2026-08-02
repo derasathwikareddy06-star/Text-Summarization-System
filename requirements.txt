@@ -3,5 +3,5 @@ uvicorn==0.30.6
 jinja2
 python-multipart
 transformers==4.41.2
-torch==2.3.1
+torch
 sentencepiece
