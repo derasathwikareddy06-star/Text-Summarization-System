@@ -3,6 +3,7 @@ from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from starlette.requests import Request
+import uvicorn
 
 from summarizer import summarize_text
 
@@ -24,6 +25,8 @@ async def home(request: Request):
         }
     )
 
+if __name__ == "__main__":
+    uvicorn.run(app, host="127.0.0.1", port=5000)
 
 @app.post("/summarize", response_class=HTMLResponse)
 async def summarize(request: Request, text: str = Form(...)):
