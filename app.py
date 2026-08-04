@@ -25,6 +25,18 @@ async def home(request: Request):
         }
     )
 
+@app.get("/{path:path}", response_class=HTMLResponse)
+async def catch_all(request: Request, path: str):
+    return templates.TemplateResponse(
+        request,
+        "index.html",
+        {
+            "request": request,
+            "summary": "",
+            "text": ""
+        }
+    )
+
 if __name__ == "__main__":
     uvicorn.run(app, host="127.0.0.1", port=5000)
 
